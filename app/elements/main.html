@@ -1,0 +1,37 @@
+<dom-module id="main-page">
+    <template>
+        <!-- scoped CSS for this element -->
+        <style>
+            :host{
+                --paper-toolbar-background : #E65100
+            }
+        </style>
+        <div>
+            <paper-toolbar class="tall"></paper-toolbar>
+        </div>
+    </template>
+
+    <script>
+        Polymer({
+            is: "main-page",
+            behaviors: [Polymer.NeonAnimatableBehavior],
+            properties:{
+                animationConfig:{
+                    value:function () {
+                        return{
+                            'entry':{
+                                name: 'slide-from-left-animation',
+                                node: this
+                            },
+                            'exit':{
+                                name: 'slide-left-animation',
+                                node: this
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+
+</dom-module>

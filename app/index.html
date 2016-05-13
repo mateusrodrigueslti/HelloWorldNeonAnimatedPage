@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>NeonAnimationHello</title>
+    <script src="../bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+    <link rel="import" href="../bower_components/polymer/polymer.html">
+    <link rel="import" href="../bower_components/neon-animation/neon-animated-pages.html">
+    <link rel="import" href="../bower_components/neon-animation/neon-animatable-behavior.html">
+    <link rel="import" href="../bower_components/iron-flex-layout/classes/iron-flex-layout.html">
+    <link rel="import" href="../bower_components/paper-scroll-header-panel/paper-scroll-header-panel.html">
+    <link rel="import" href="../bower_components/paper-toolbar/paper-toolbar.html">
+
+    <!--ANIMATIONS-->
+    <link rel="import" href="../bower_components/neon-animation/animations/slide-from-left-animation.html">
+    <link rel="import" href="../bower_components/neon-animation/animations/slide-from-right-animation.html">
+    <link rel="import" href="../bower_components/neon-animation/animations/slide-right-animation.html">
+    <link rel="import" href="../bower_components/neon-animation/animations/slide-left-animation.html">
+    <link rel="import" href="../bower_components/neon-animation/animations/fade-out-animation.html">
+
+    <!--ELEMENTS-->
+    <link rel="import" href="../app/elements/login.html">
+    <link rel="import" href="../app/elements/main.html">
+</head>
+<body class="fullbleed layout vertical" unresolved>
+    <template is="dom-bind" id="app">
+        <neon-animated-pages class="flex" selected="[[selected]]">
+            <login-page></login-page>
+            <main-page></main-page>
+        </neon-animated-pages>
+    </template>
+    <script>
+        var app = document.querySelector('#app');
+        app.selected = 0;
+    </script>
+</body>
+</html>
